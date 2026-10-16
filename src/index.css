@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@theme { --color-bg:#05070B; --color-bg2:#0B1019; --color-blue:#1677FF; --color-cyan:#35E5FF; --color-fg:#F5F8FF; --color-muted:#A5B1C5; --font-sans: "Inter", system-ui, sans-serif; }
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{background:#05070B;color:#F5F8FF;font-family:var(--font-sans);overflow-x:hidden}
+.grid-bg{background-image:linear-gradient(rgba(53,229,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(53,229,255,.05) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%)}
+.grad{background:linear-gradient(90deg,#1677FF,#35E5FF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.dot{position:absolute;width:3px;height:3px;border-radius:9999px;background:#35E5FF;opacity:.5;animation:rise 9s linear infinite}
+@keyframes rise{from{transform:translateY(0)}to{transform:translateY(-120px);opacity:0}}
+:focus-visible{outline:2px solid #35E5FF;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.dot{animation:none}}
+@media (max-width:768px){.dot{display:none}}
